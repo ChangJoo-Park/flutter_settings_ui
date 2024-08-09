@@ -23,7 +23,7 @@ import 'package:flutter_settings_ui/flutter_settings_ui.dart';
 
 ## Basic Usage:
 ```dart
-      SettingsList(
+    SettingsList(
         sections: [
           SettingsSection(
             title: const Text('Section'),
@@ -33,12 +33,13 @@ import 'package:flutter_settings_ui/flutter_settings_ui.dart';
                 description: const Text('English'),
                 leading: const Icon(Icons.language),
                 onPressed: (BuildContext context) {},
-                ),
+              ),
               SettingsTile.switchTile(
-                initialValue: false,
                 title: const Text('Use fingerprint'),
                 leading: const Icon(Icons.fingerprint),
                 onToggle: (bool value) {},
+                initialValue: false,
+                activeSwitchColor: TBColors.blue500,
               ),
             ],
           ),
